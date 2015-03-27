@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>guard</Title>
+			<Shortcut>guard</Shortcut>
+			<Description>Code snippet for an automatically implemented argument guard
+Language Version: C# 2.0 or higher</Description>
+			<Author>Pavels Ahmadulins</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>argumentName</ID>
+					<ToolTip>Argument name</ToolTip>
+					<Default>value</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[if ($argumentName$ == null)
+            {
+                throw new ArgumentNullException("$argumentName$");
+            }
+
+            this._$argumentName$ = $argumentName$;]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

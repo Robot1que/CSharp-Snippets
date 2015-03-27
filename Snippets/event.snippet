@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>event</Title>
+			<Shortcut>event</Shortcut>
+			<Description>Code snippet for an automatically implemented event
+Language Version: C# 2.0 or higher</Description>
+			<Author>Meditec</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>eventHandler</ID>
+					<ToolTip>EventHandler type</ToolTip>
+					<Default>EventHandler</Default>
+				</Literal>
+				<Literal>
+					<ID>eventName</ID>
+					<ToolTip>Event name</ToolTip>
+					<Default>ValueChanged</Default>
+				</Literal>
+				<Literal>
+					<ID>eventArgs</ID>
+					<ToolTip>EventArgs type</ToolTip>
+					<Default>EventArgs</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[public event $eventHandler$ $eventName$;
+        private void On$eventName$($eventArgs$ args)
+        {
+            if (this.$eventName$ != null)
+            {
+                this.$eventName$.Invoke(this, args);
+            }
+        }]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
